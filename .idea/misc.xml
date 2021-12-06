@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/drawable/item_recyclerview.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/drawable/item_right.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/activity_splash.xml" value="0.2" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/call_dialog.xml" value="0.264" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/fragment_number_list.xml" value="0.264" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/fragment_right_phone_number.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/item_department.xml" value="0.264" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/item_number.xml" value="0.264" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
