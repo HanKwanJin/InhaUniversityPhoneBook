@@ -13,7 +13,6 @@
         tools:text="전체학과"
         android:fontFamily="@font/bmjua_ttf"
         android:textColor="@color/black"
-        android:textStyle="bold"
         android:textSize="16sp"
         android:maxLines="1"
         android:gravity="center"

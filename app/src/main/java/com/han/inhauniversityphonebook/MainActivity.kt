@@ -39,6 +39,9 @@ class MainActivity : AppCompatActivity() {
         val fragment10 = Fragment10()
         val fragment11 = Fragment11()
         val fragment12 = Fragment12()
+        val fragment13 = Fragment13()
+        val fragment14 = Fragment14()
+        val fragment15 = Fragment15()
 
         initLeftList()
         departmentListAdapter = DepartmentListAdapter(onItemClicked = {
@@ -56,6 +59,10 @@ class MainActivity : AppCompatActivity() {
                 "예술체육대학" -> replaceFragment(fragment10)
                 "국제학부" -> replaceFragment(fragment11)
                 "소프트웨어융합대학" -> replaceFragment(fragment12)
+                "학생지원/생활관" -> replaceFragment(fragment13)
+                "총학/신문" -> replaceFragment(fragment14)
+                "교내IT서비스관련" -> replaceFragment(fragment15)
+
             }
         })
         leftRecyclerView.adapter = departmentListAdapter
@@ -78,6 +85,9 @@ class MainActivity : AppCompatActivity() {
     private fun initLeftList(){
         departmentList.clear()
         departmentList.add(NumberModel("전체","",""))
+        departmentList.add(NumberModel("학생지원/생활관","",""))
+        departmentList.add(NumberModel("총학/신문","",""))
+        departmentList.add(NumberModel("교내IT서비스관련","",""))
         departmentList.add(NumberModel("프런티어학부대학","",""))
         departmentList.add(NumberModel("공과대학","",""))
         departmentList.add(NumberModel("자연과학대학","",""))
