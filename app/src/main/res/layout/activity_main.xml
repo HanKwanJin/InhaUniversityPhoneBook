@@ -1,123 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/topLayout"
-        android:background="@color/gray4"
-        android:layout_width="match_parent"
+    android:background="@color/backgroundColor">
+
+    <ImageButton
+        android:id="@+id/logoImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="25dp"
+        android:background="@color/backgroundColor"
+        android:scaleType="fitXY"
+        android:src="@drawable/emblem"
+        app:layout_constraintEnd_toStartOf="@+id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
-        <TextView
-            android:fontFamily="@font/bmjua_ttf"
-            android:textColor="@color/gray4"
-            android:background="@color/gray2"
-            android:textSize="30sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text=" 인하대학교 전화번호부"
-            android:id="@+id/barTextView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
-        <View
-            android:id="@+id/barLine"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/barTextView"
-            android:background="@color/gray1"
-            android:layout_width="0dp"
-            android:layout_height="1dp"/>
-        <ImageView
-            android:background="@color/gray4"
-            android:src="@drawable/emblem1"
-            android:scaleType="fitXY"
-            android:id="@+id/logoImageView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/barLine"
-            android:layout_width="150dp"
-            android:layout_height="150dp"/>
-        <View
-            android:id="@+id/imageSideLine"
-            android:background="@color/gray1"
-            app:layout_constraintStart_toEndOf="@+id/logoImageView"
-            app:layout_constraintTop_toBottomOf="@+id/barLine"
-            app:layout_constraintBottom_toBottomOf="@+id/logoImageView"
-            android:layout_width="1dp"
-            android:layout_height="0dp"/>
-        <TextView
-            android:id="@+id/phoneNumberTextView"
-            android:fontFamily="@font/bmjua_ttf"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp"
-            app:layout_constraintStart_toEndOf="@+id/imageSideLine"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/barLine"
-            android:text="@string/phoneNumber"
-            android:textColor="@color/black"
-            android:textSize="40sp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
-        <EditText
-            android:id="@+id/numberFindEditText"
-            android:fontFamily="@font/bmjua_ttf"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="@id/phoneNumberTextView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/phoneNumberTextView"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_width="0dp"
-            android:hint="찾는곳 검색"
-            android:inputType="text"
-            android:layout_height="wrap_content"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <View
-        android:id="@+id/grayBar"
-        android:background="@color/gray1"
-        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/bold"
+        android:text="인하대학교  전화번호부"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topLayout"
-        android:layout_width="0dp"
-        android:layout_height="1dp"/>
+        app:layout_constraintStart_toEndOf="@+id/logoImageView"
+        app:layout_constraintTop_toTopOf="@+id/logoImageView" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        app:layout_constraintTop_toBottomOf="@+id/grayBar"
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/edit_background"
+        android:drawableRight="@drawable/ic_search"
+        android:fontFamily="@font/regular"
+        android:hint="연락처가 궁금한 곳을 입력하세요!"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/logoImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/titleTextView" />
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="0dp"
-        android:orientation="horizontal"
-        android:layout_height="0dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImageView" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:background="@color/gray4"
-            tools:listitem="@layout/item_department"
-            android:id="@+id/leftRecyclerView"
-            android:layout_width="150dp"
-            android:layout_height="match_parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-        <View
-            android:id="@+id/sideGrayBar"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/leftRecyclerView"
-            android:background="@color/gray1"
-            android:layout_width="1dp"
-            android:layout_height="0dp"/>
-        <FrameLayout
-            android:background="@color/gray2"
-            android:id="@+id/rightFrameLayout"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/sideGrayBar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="0dp"
-            android:layout_height="0dp"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,9 +10,10 @@
     <color name="gray_bar">#cccccc</color>
     <color name="inha_color">#0091D3</color>
     <color name="lightgray">#83ECEAEA</color>
-
     <color name="gray1">#6A7B8B</color>
     <color name="gray2">#B3C5CF</color>
     <color name="gray3">#A0A19D</color>
     <color name="gray4">#E8ECE5</color>
+    <color name="backgroundColor">#F4F9FD</color>
+    <color name="eidtBackgroundColor">#6A7B8B</color>
 </resources>

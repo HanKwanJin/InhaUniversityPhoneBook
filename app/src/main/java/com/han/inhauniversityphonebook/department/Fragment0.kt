@@ -3,6 +3,7 @@ package com.han.inhauniversityphonebook.department
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,9 +11,12 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.widget.AppCompatButton
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
+import com.han.inhauniversityphonebook.MainActivity
 import com.han.inhauniversityphonebook.R
 import com.han.inhauniversityphonebook.adapter.DepartmentAdapter
 import com.han.inhauniversityphonebook.databinding.FragmentNumberListBinding
@@ -22,13 +26,13 @@ class Fragment0: Fragment(R.layout.fragment_number_list){
     private var binding: FragmentNumberListBinding? = null
     private lateinit var departmentAdapter: DepartmentAdapter
     private val departmentList = mutableListOf<NumberModel>()
-
     @SuppressLint("NotifyDataSetChanged")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         initList()
         val fragmentNumberListBinding = FragmentNumberListBinding.bind(view)
+        val fragmentHome = FragmentHome()
         binding = fragmentNumberListBinding
 
         departmentAdapter = DepartmentAdapter(onItemClicked = {
@@ -46,21 +50,40 @@ class Fragment0: Fragment(R.layout.fragment_number_list){
                 .show()
 
             callButton.setOnClickListener {
-                val intent = Intent(Intent.ACTION_DIAL)
-                intent.data = Uri.parse("tel:$callNumber")
+                when{
+                    context?.let { context ->
+                        ContextCompat.checkSelfPermission(
+                            context,
+                            android.Manifest.permission.CALL_PHONE
+                        )
+                    } == PackageManager.PERMISSION_GRANTED -> {
+
+                    }
+                    shouldShowRequestPermissionRationale(android.Manifest.permission.CALL_PHONE) ->{
+
+                    }
+                    else -> {
+
+                    }
+                }
+
             }
             copyButton.setOnClickListener {
 
             }
 
         })
-
+        fragmentNumberListBinding.backButton.setOnClickListener {
+            (activity as MainActivity).replaceFragment(fragmentHome)
+        }
         fragmentNumberListBinding.departmentRecyclerView.adapter = departmentAdapter
         fragmentNumberListBinding.departmentRecyclerView.layoutManager = LinearLayoutManager(context)
 
         departmentAdapter.submitList(departmentList)
         departmentAdapter.notifyDataSetChanged()
     }
+
+
 
     private fun initList(){
         departmentList.clear()
