@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#0A0A0A">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/inhabig"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/departmentNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="{developer_name}"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/titleBar"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/departmentNameTextView" />
+
+    <ImageView
+        android:id="@+id/firstProfileImageView"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/profile"
+        app:layout_constraintEnd_toStartOf="@id/firstProfileTextView"
+        app:layout_constraintStart_toStartOf="@id/titleBar"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar" />
+
+    <TextView
+        android:id="@+id/firstProfileTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/regular"
+        app:layout_constraintEnd_toStartOf="@+id/secondProfileImageView"
+        android:text="DongDong\n(App Develop)"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/firstProfileImageView"
+        app:layout_constraintStart_toEndOf="@+id/firstProfileImageView"
+        app:layout_constraintTop_toTopOf="@+id/firstProfileImageView" />
+
+    <ImageView
+        android:id="@+id/secondProfileImageView"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/profile"
+        app:layout_constraintEnd_toStartOf="@+id/secondProfileTextView"
+        app:layout_constraintStart_toEndOf="@+id/firstProfileTextView"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar" />
+
+    <TextView
+        android:id="@+id/secondProfileTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/regular"
+        android:layout_marginEnd="30dp"
+        android:text="Mei\n(UI/UX Design)"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/titleBar"
+        app:layout_constraintBottom_toBottomOf="@+id/secondProfileImageView"
+        app:layout_constraintStart_toEndOf="@+id/secondProfileImageView"
+        app:layout_constraintTop_toTopOf="@+id/secondProfileImageView" />
+
+    <ImageButton
+        android:id="@+id/logoutButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/homeBackButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstProfileTextView" />
+
+    <ImageButton
+        android:id="@+id/homeBackButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logoutButton"
+        app:layout_constraintTop_toBottomOf="@+id/secondProfileTextView" />
+
+    <TextView
+        android:id="@+id/logoutTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:text="GoodBye"
+        android:textColor="#FFE398"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="@+id/logoutButton"
+        app:layout_constraintStart_toStartOf="@+id/logoutButton"
+        app:layout_constraintTop_toBottomOf="@+id/logoutButton" />
+
+    <TextView
+        android:id="@+id/homeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:text="HOME"
+        android:textColor="#FFE398"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="@+id/homeBackButton"
+        app:layout_constraintStart_toStartOf="@+id/homeBackButton"
+        app:layout_constraintTop_toBottomOf="@+id/homeBackButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

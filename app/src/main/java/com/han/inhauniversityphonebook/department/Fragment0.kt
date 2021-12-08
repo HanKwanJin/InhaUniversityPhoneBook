@@ -2,20 +2,24 @@ package com.han.inhauniversityphonebook.department
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
+import android.content.Context.CLIPBOARD_SERVICE
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.TextView
-import androidx.appcompat.widget.AppCompatButton
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.snackbar.Snackbar
 import com.han.inhauniversityphonebook.MainActivity
 import com.han.inhauniversityphonebook.R
 import com.han.inhauniversityphonebook.adapter.DepartmentAdapter
@@ -24,13 +28,18 @@ import com.han.inhauniversityphonebook.model.NumberModel
 
 class Fragment0: Fragment(R.layout.fragment_number_list){
     private var binding: FragmentNumberListBinding? = null
+    private var inDuckText: String? = null
     private lateinit var departmentAdapter: DepartmentAdapter
     private val departmentList = mutableListOf<NumberModel>()
+    private val copyText = mutableListOf<String>()
     @SuppressLint("NotifyDataSetChanged")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         initList()
+        initCopyText()
+
+
         val fragmentNumberListBinding = FragmentNumberListBinding.bind(view)
         val fragmentHome = FragmentHome()
         binding = fragmentNumberListBinding
@@ -39,8 +48,10 @@ class Fragment0: Fragment(R.layout.fragment_number_list){
             val dialogView = LayoutInflater.from(context).inflate(R.layout.call_dialog,null)
             val dialogNumberTextView = dialogView.findViewById<TextView>(R.id.dialogNumberTextView)
             val departmentNameTextView = dialogView.findViewById<TextView>(R.id.departmentNameTextView)
-            val callButton = dialogView.findViewById<Button>(R.id.callButton)
-            val copyButton = dialogView.findViewById<Button>(R.id.copyButton)
+            val callButton = dialogView.findViewById<ImageButton>(R.id.callIconButton)
+            val copyButton = dialogView.findViewById<ImageButton>(R.id.copyIconButton)
+
+            val numberForCopy = it.number.toString()
             val callNumber = it.call.toString()
             dialogNumberTextView.text = it.number.toString()
             departmentNameTextView.text = it.name.toString()
@@ -50,29 +61,22 @@ class Fragment0: Fragment(R.layout.fragment_number_list){
                 .show()
 
             callButton.setOnClickListener {
-                when{
-                    context?.let { context ->
-                        ContextCompat.checkSelfPermission(
-                            context,
-                            android.Manifest.permission.CALL_PHONE
-                        )
-                    } == PackageManager.PERMISSION_GRANTED -> {
-
-                    }
-                    shouldShowRequestPermissionRationale(android.Manifest.permission.CALL_PHONE) ->{
-
-                    }
-                    else -> {
-
-                    }
-                }
+                val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$callNumber"))
+                startActivity(intent)
 
             }
             copyButton.setOnClickListener {
+                inDuckText = copyText.random()
+                (requireActivity().getSystemService(CLIPBOARD_SERVICE) as ClipboardManager).apply {
+                    setPrimaryClip(ClipData.newPlainText("INHA", "$numberForCopy"))
+                    Toast.makeText(context, "$inDuckText", Toast.LENGTH_SHORT).show()
+                }
 
             }
 
         })
+
+
         fragmentNumberListBinding.backButton.setOnClickListener {
             (activity as MainActivity).replaceFragment(fragmentHome)
         }
@@ -83,6 +87,13 @@ class Fragment0: Fragment(R.layout.fragment_number_list){
         departmentAdapter.notifyDataSetChanged()
     }
 
+    private fun initCopyText() {
+        copyText.clear()
+        copyText.add("인덕이가 번호를 기억했어요.")
+        copyText.add("괴도 인덕이가 번호를 훔쳐갔어요\uD83E\uDD2B")
+        copyText.add("앗! 야생의 인덕(이)가 번호를 복사했다!")
+        copyText.add("다음은 당신의 마음 차례입니다.")
+    }
 
 
     private fun initList(){

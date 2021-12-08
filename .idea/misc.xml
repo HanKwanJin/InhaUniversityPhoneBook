@@ -3,25 +3,31 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/drawable-v24/departmentText.xml" value="0.2557291666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/drawable-xxhdpi/duck_mark.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/drawable/backbutton.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/drawable/backbutton_background.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/drawable/button_background.xml" value="0.2074074074074074" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/drawable/button_shadow.xml" value="0.2" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/drawable/department_text.xml" value="0.2557291666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/drawable/duck_mark.xml" value="0.20277777777777778" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/drawable/edit_background.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/drawable/ic_call.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/drawable/ic_search.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/drawable/item_recyclerview.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/drawable/item_right.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/drawable/popup_background.xml" value="0.2557291666666667" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/drawable/random_text.xml" value="0.2557291666666667" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/drawable/textview_shadow.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/drawable/textviewbackground.xml" value="0.26979166666666665" />
-        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/activity_splash.xml" value="0.2" />
-        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/call_dialog.xml" value="0.264" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/activity_splash.xml" value="0.264" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/back_dialog.xml" value="0.4" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/call_dialog.xml" value="0.4" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/fragment_home_list.xml" value="0.264" />
-        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/fragment_number_list.xml" value="0.264" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/fragment_number_list.xml" value="0.152" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/fragment_right_phone_number.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/item_department.xml" value="0.264" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/item_department.xml" value="0.6" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/item_home.xml" value="0.264" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/item_number.xml" value="0.264" />
         <entry key="..\:/Users/Administrator/AndroidStudioProjects/InhaUniversityPhoneBook/app/src/main/res/layout/tmp_main.xml" value="0.4" />

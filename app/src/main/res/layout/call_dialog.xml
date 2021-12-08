@@ -3,66 +3,137 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/popup_background"
     android:layout_height="wrap_content">
-
+    
+    <ImageView
+        android:src="@drawable/inhabig"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="200dp"
+        android:scaleType="fitXY"
+        android:layout_height="100dp"/>
     <TextView
         android:maxLines="1"
         android:id="@+id/departmentNameTextView"
         android:layout_width="0dp"
+        android:gravity="center"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/white"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="컴퓨터공학과" />
+        tools:text="인하대학교 총학생회" />
+
+    <View
+        android:id="@+id/titleBar"
+        android:layout_marginHorizontal="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/departmentNameTextView"
+        android:background="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="1dp"/>
 
     <ImageView
+
+        app:layout_constraintVertical_chainStyle="packed"
         android:id="@+id/callImageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_call"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/departmentNameTextView" />
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/call"
+        app:layout_constraintBottom_toTopOf="@+id/locationImageView"
+        app:layout_constraintStart_toStartOf="@+id/titleBar"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
+        android:layout_marginStart="10dp"
         android:id="@+id/dialogNumberTextView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/copyButton"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:fontFamily="@font/regular"
         app:layout_constraintStart_toEndOf="@+id/callImageView"
-        app:layout_constraintTop_toBottomOf="@+id/departmentNameTextView"
+        app:layout_constraintTop_toTopOf="@+id/callImageView"
+        app:layout_constraintBottom_toBottomOf="@+id/callImageView"
         tools:text="032-111-1111" />
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/locationImageView"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toStartOf="@+id/callImageView"
+        app:layout_constraintTop_toBottomOf="@+id/callImageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/location"/>
+    <TextView
+        android:text="학생회관 407호"
+        android:id="@+id/locationTextView"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/locationImageView"
+        app:layout_constraintTop_toTopOf="@+id/locationImageView"
+        app:layout_constraintBottom_toBottomOf="@+id/locationImageView"
+        android:fontFamily="@font/regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/callButton"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:text="전화걸기"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/copyButton"
+    <ImageButton
+        android:layout_marginTop="10dp"
+        android:id="@+id/callIconButton"
+        app:layout_constraintTop_toBottomOf="@+id/locationTextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/callImageView" />
+        app:layout_constraintEnd_toStartOf="@+id/copyIconButton"
+        android:src="@drawable/callicon"
+        android:scaleType="fitXY"
+        android:background="#00000000"
+        android:layout_width="40dp"
 
-    <Button
-        android:id="@+id/copyButton"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:text="번호 복사하기"
-        android:textColor="@color/black"
-        android:textStyle="bold"
+        android:layout_height="40dp"/>
+
+    <ImageButton
+        android:id="@+id/copyIconButton"
+        app:layout_constraintTop_toTopOf="@+id/callIconButton"
+        app:layout_constraintStart_toEndOf="@+id/callIconButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/callButton"
-        app:layout_constraintTop_toBottomOf="@+id/callImageView" />
+        android:src="@drawable/copyicon"
+        android:scaleType="fitXY"
+        android:background="#00000000"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+    <TextView
+        android:id="@+id/callIconText"
+        app:layout_constraintStart_toStartOf="@+id/callIconButton"
+        app:layout_constraintEnd_toEndOf="@+id/callIconButton"
+        app:layout_constraintTop_toBottomOf="@+id/callIconButton"
+        android:text="전화걸기"
+        android:textSize="8sp"
+        android:fontFamily="@font/regular"
+        android:textColor="#FFE398"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:text="번호 복사하기"
+        android:textColor="#FFE398"
+        android:textSize="8sp"
+        android:fontFamily="@font/regular"
+        app:layout_constraintStart_toStartOf="@+id/copyIconButton"
+        app:layout_constraintEnd_toEndOf="@+id/copyIconButton"
+        app:layout_constraintTop_toBottomOf="@+id/callIconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

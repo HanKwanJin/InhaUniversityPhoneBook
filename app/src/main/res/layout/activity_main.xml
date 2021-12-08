@@ -8,8 +8,8 @@
 
     <ImageButton
         android:id="@+id/logoImageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_margin="25dp"
         android:background="@color/backgroundColor"
         android:scaleType="fitXY"
@@ -30,12 +30,14 @@
         app:layout_constraintStart_toEndOf="@+id/logoImageView"
         app:layout_constraintTop_toTopOf="@+id/logoImageView" />
 
+
     <EditText
+        android:id="@+id/numberFindEditText"
         android:layout_width="0dp"
+        android:maxLines="1"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="30dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/edit_background"
-        android:drawableRight="@drawable/ic_search"
         android:fontFamily="@font/regular"
         android:hint="연락처가 궁금한 곳을 입력하세요!"
         android:textColor="@color/white"
@@ -45,7 +47,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/titleTextView" />
 
-
+    <ImageView
+        app:layout_constraintStart_toEndOf="@+id/logoImageView"
+        app:layout_constraintBottom_toBottomOf="@+id/numberFindEditText"
+        app:layout_constraintTop_toTopOf="@+id/numberFindEditText"
+        android:src="@drawable/search"
+        android:scaleType="fitXY"
+        android:layout_marginStart="35dp"
+        android:layout_width="13dp"
+        android:layout_height="13dp"/>
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="0dp"
@@ -53,8 +63,10 @@
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoImageView" />
+        app:layout_constraintTop_toBottomOf="@+id/logoImageView"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.TextUtils.replace
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.han.inhauniversityphonebook.MainActivity
@@ -27,11 +28,10 @@ class FragmentHome: Fragment(R.layout.fragment_home_list){
         initList()
         val fragmentHomeListBinding = FragmentHomeListBinding.bind(view)
         binding = fragmentHomeListBinding
+
+        //홈 화면 오리 대사가 계속 바뀌도록 함
         initRandomText()
-
-
-        val randomIdx = (0..randomText.size).random()
-        fragmentHomeListBinding.randomTextView.text = randomText[randomIdx].toString()
+        fragmentHomeListBinding.randomTextView.text = randomText.random()
 
         val fragment0 = Fragment0()
         val fragment1 = Fragment1()
@@ -49,26 +49,27 @@ class FragmentHome: Fragment(R.layout.fragment_home_list){
         val fragment13 = Fragment13()
         val fragment14 = Fragment14()
         val fragment15 = Fragment15()
-
+        fragmentHomeListBinding.homeDuckButton.setOnClickListener {
+            Toast.makeText(context, "오리 터치", Toast.LENGTH_SHORT).show()
+        }
         homeListAdapter = HomeListAdapter(onItemClicked = {
             when(it.name){
-                "전체" -> (activity as MainActivity).replaceFragment(fragment0)
-//                "프런티어학부대학" ->mainActivity.replaceFragment(fragment1)
-//                "공과대학" -> mainActivity.replaceFragment(fragment2)
-//                "자연과학대학" -> mainActivity.replaceFragment(fragment3)
-//                "경영대학" -> mainActivity.replaceFragment(fragment4)
-//                "사범대학" -> mainActivity.replaceFragment(fragment5)
-//                "사회과학대학" -> mainActivity.replaceFragment(fragment6)
-//                "문과대학" -> mainActivity.replaceFragment(fragment7)
-//                "의과대학" -> mainActivity.replaceFragment(fragment8)
-//                "미래융합대학" -> mainActivity.replaceFragment(fragment9)
-//                "예술체육대학" -> mainActivity.replaceFragment(fragment10)
-//                "국제학부" -> mainActivity.replaceFragment(fragment11)
-//                "소프트웨어융합대학" -> mainActivity.replaceFragment(fragment12)
-//                "학생지원/생활관" -> mainActivity.replaceFragment(fragment13)
-//                "총학/신문" -> mainActivity.replaceFragment(fragment14)
-//                "교내IT서비스관련" -> mainActivity.replaceFragment(fragment15)
-
+                "전체" -> replaceFragment(fragment0)
+                "프런티어학부대학" ->replaceFragment(fragment1)
+                "공과대학" -> replaceFragment(fragment2)
+                "자연과학대학" -> replaceFragment(fragment3)
+                "경영대학" -> replaceFragment(fragment4)
+                "사범대학" -> replaceFragment(fragment5)
+                "사회과학대학" -> replaceFragment(fragment6)
+                "문과대학" -> replaceFragment(fragment7)
+                "의과대학" -> replaceFragment(fragment8)
+                "미래융합대학" -> replaceFragment(fragment9)
+                "예술체육대학" -> replaceFragment(fragment10)
+                "국제학부" -> replaceFragment(fragment11)
+                "소프트웨어융합대학" -> replaceFragment(fragment12)
+                "학생지원/생활관" -> replaceFragment(fragment13)
+                "총학/신문" -> replaceFragment(fragment14)
+                "교내IT서비스관련" -> replaceFragment(fragment15)
             }
         })
 
@@ -82,9 +83,10 @@ class FragmentHome: Fragment(R.layout.fragment_home_list){
     private fun initRandomText() {
         randomText.clear()
         randomText.add("오리가 얼면? 언덕! 인하하하하하")
-        randomText.add("아직 정하지 않았습니다 11111")
-        randomText.add("아직 정하지 않았습니다 22222")
-        randomText.add("아직 정하지 않았습니다 33333")
+        randomText.add("(여보세요) 인하세요?")
+        randomText.add("따르릉 따르릉 내가 네 인하야~~")
+        randomText.add("어라 이거..어쩌면 유용할지도?")
+        randomText.add("즐겨찾기하고 나를 눌러봐!")
     }
 
     private fun initList(){
@@ -108,7 +110,9 @@ class FragmentHome: Fragment(R.layout.fragment_home_list){
 
     }
 
-
+    private fun replaceFragment(fragment: Fragment){
+        (activity as MainActivity).replaceFragment(fragment)
+    }
 
 
 

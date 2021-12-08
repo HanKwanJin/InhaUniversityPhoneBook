@@ -18,6 +18,7 @@ class DepartmentAdapter(val onItemClicked: (NumberModel) -> Unit): ListAdapter<N
             binding.departmentNameTextView.text = numberModel.name
             binding.departmentNumberTextView.text = numberModel.number
 
+
         }
     }
 

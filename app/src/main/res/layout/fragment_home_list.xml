@@ -3,29 +3,43 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_duck2">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/noduck_blue">
+
+    <ImageButton
+        android:id="@+id/homeDuckButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:background="#00000000"
+        android:scaleType="fitXY"
+        android:src="@drawable/duckicon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/homeRecyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/randomTextView" />
 
     <TextView
         android:id="@+id/randomTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/random_text"
         android:fontFamily="@font/regular"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         android:text="오리가 얼면? 언덕! 인하하하하"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/homeRecyclerView"
+        app:layout_constraintBottom_toTopOf="@+id/homeDuckButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
+        tools:listitem="@layout/item_home"
         android:id="@+id/homeRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
