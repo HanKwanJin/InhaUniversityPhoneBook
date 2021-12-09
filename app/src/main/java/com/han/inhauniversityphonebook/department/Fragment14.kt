@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.han.inhauniversityphonebook.CallCustomDialog
+import com.han.inhauniversityphonebook.MainActivity
 import com.han.inhauniversityphonebook.R
 import com.han.inhauniversityphonebook.adapter.DepartmentAdapter
 import com.han.inhauniversityphonebook.databinding.FragmentNumberListBinding
@@ -24,9 +26,19 @@ class Fragment14: Fragment(R.layout.fragment_number_list){
         binding = fragmentNumberListBinding
 
         departmentAdapter = DepartmentAdapter(onItemClicked = {
+            val name = it.name.toString()
+            val numberForCopy = it.number.toString()
+            val callNumber = it.call.toString()
+            val dialogView = CallCustomDialog(name, numberForCopy, callNumber)
 
+            activity?.let { it -> dialogView.show(it.supportFragmentManager, "call") }
         })
 
+        val fragmentHome = FragmentHome()
+        fragmentNumberListBinding.backButton.setOnClickListener {
+            (activity as MainActivity).replaceFragment(fragmentHome)
+        }
+        fragmentNumberListBinding.textView.text = "총학/신문"
         fragmentNumberListBinding.departmentRecyclerView.adapter = departmentAdapter
         fragmentNumberListBinding.departmentRecyclerView.layoutManager = LinearLayoutManager(context)
 

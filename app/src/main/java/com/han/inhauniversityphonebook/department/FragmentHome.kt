@@ -18,7 +18,6 @@ import com.han.inhauniversityphonebook.model.NumberModel
 class FragmentHome: Fragment(R.layout.fragment_home_list){
     private var binding: FragmentHomeListBinding? = null
     private lateinit var homeListAdapter: HomeListAdapter
-    private val mainActivity = MainActivity()
     private val departmentList = mutableListOf<NumberModel>()
     private val randomText = mutableListOf<String>()
     @SuppressLint("NotifyDataSetChanged")
@@ -49,7 +48,7 @@ class FragmentHome: Fragment(R.layout.fragment_home_list){
         val fragment13 = Fragment13()
         val fragment14 = Fragment14()
         val fragment15 = Fragment15()
-        fragmentHomeListBinding.homeDuckButton.setOnClickListener {
+        fragmentHomeListBinding.homeFavoriteDuckButton.setOnClickListener {
             Toast.makeText(context, "오리 터치", Toast.LENGTH_SHORT).show()
         }
         homeListAdapter = HomeListAdapter(onItemClicked = {
@@ -87,6 +86,8 @@ class FragmentHome: Fragment(R.layout.fragment_home_list){
         randomText.add("따르릉 따르릉 내가 네 인하야~~")
         randomText.add("어라 이거..어쩌면 유용할지도?")
         randomText.add("즐겨찾기하고 나를 눌러봐!")
+        randomText.add("인하대 만세 !!!")
+        randomText.add("지금 당장 이 번호로 Call!!!")
     }
 
     private fun initList(){

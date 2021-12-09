@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#0A0A0A">
+    android:background="@drawable/back_dialog_shape">
 
     <ImageView
         android:layout_width="200dp"
         android:layout_height="100dp"
-        android:scaleType="fitXY"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/inhabig"
         android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/inhabig"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,11 +59,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:fontFamily="@font/regular"
-        app:layout_constraintEnd_toStartOf="@+id/secondProfileImageView"
-        android:text="DongDong\n(App Develop)"
+        android:text="DongDong\nApp Develop"
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/firstProfileImageView"
+        app:layout_constraintEnd_toStartOf="@+id/secondProfileImageView"
         app:layout_constraintStart_toEndOf="@+id/firstProfileImageView"
         app:layout_constraintTop_toTopOf="@+id/firstProfileImageView" />
 
@@ -83,13 +83,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:fontFamily="@font/regular"
         android:layout_marginEnd="30dp"
+        android:fontFamily="@font/regular"
         android:text="Mei\n(UI/UX Design)"
         android:textColor="@color/white"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/titleBar"
         app:layout_constraintBottom_toBottomOf="@+id/secondProfileImageView"
+        app:layout_constraintEnd_toEndOf="@+id/titleBar"
         app:layout_constraintStart_toEndOf="@+id/secondProfileImageView"
         app:layout_constraintTop_toTopOf="@+id/secondProfileImageView" />
 

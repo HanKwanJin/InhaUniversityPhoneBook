@@ -16,4 +16,6 @@
     <color name="gray4">#E8ECE5</color>
     <color name="backgroundColor">#F4F9FD</color>
     <color name="eidtBackgroundColor">#6A7B8B</color>
+    <drawable name="button_white">#FFFFFF</drawable>
+    <drawable name="button_gray">#6A7B8B</drawable>
 </resources>

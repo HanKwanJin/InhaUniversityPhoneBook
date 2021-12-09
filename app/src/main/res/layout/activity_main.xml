@@ -34,12 +34,15 @@
     <EditText
         android:id="@+id/numberFindEditText"
         android:layout_width="0dp"
-        android:maxLines="1"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:background="@drawable/edit_background"
+        android:cursorVisible="false"
         android:fontFamily="@font/regular"
         android:hint="연락처가 궁금한 곳을 입력하세요!"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLines="1"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="10sp"
@@ -48,14 +51,15 @@
         app:layout_constraintStart_toStartOf="@+id/titleTextView" />
 
     <ImageView
-        app:layout_constraintStart_toEndOf="@+id/logoImageView"
-        app:layout_constraintBottom_toBottomOf="@+id/numberFindEditText"
-        app:layout_constraintTop_toTopOf="@+id/numberFindEditText"
-        android:src="@drawable/search"
-        android:scaleType="fitXY"
-        android:layout_marginStart="35dp"
         android:layout_width="13dp"
-        android:layout_height="13dp"/>
+        android:layout_height="13dp"
+        android:layout_marginStart="35dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/search"
+        app:layout_constraintBottom_toBottomOf="@+id/numberFindEditText"
+        app:layout_constraintStart_toEndOf="@+id/logoImageView"
+        app:layout_constraintTop_toTopOf="@+id/numberFindEditText" />
+
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="0dp"

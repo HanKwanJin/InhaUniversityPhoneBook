@@ -8,6 +8,7 @@
     android:orientation="vertical">
 
     <ImageButton
+        android:id="@+id/favoriteDuckButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:background="#00000000"

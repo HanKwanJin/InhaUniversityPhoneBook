@@ -7,7 +7,7 @@
     android:background="@drawable/noduck_blue">
 
     <ImageButton
-        android:id="@+id/homeDuckButton"
+        android:id="@+id/homeFavoriteDuckButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginEnd="16dp"
@@ -29,7 +29,7 @@
         android:paddingEnd="20dp"
         android:text="오리가 얼면? 언덕! 인하하하하"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/homeDuckButton"
+        app:layout_constraintBottom_toTopOf="@+id/homeFavoriteDuckButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,7 +37,7 @@
     <androidx.recyclerview.widget.RecyclerView
         tools:listitem="@layout/item_home"
         android:id="@+id/homeRecyclerView"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginTop="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
