@@ -67,7 +67,7 @@ class FragmentHome: Fragment(R.layout.fragment_home_list){
                 "국제학부" -> replaceFragment(fragment11)
                 "소프트웨어융합대학" -> replaceFragment(fragment12)
                 "학생지원/생활관" -> replaceFragment(fragment13)
-                "총학/신문" -> replaceFragment(fragment14)
+                "학교자치기구" -> replaceFragment(fragment14)
                 "교내IT서비스관련" -> replaceFragment(fragment15)
             }
         })
@@ -94,7 +94,7 @@ class FragmentHome: Fragment(R.layout.fragment_home_list){
         departmentList.clear()
         departmentList.add(NumberModel("전체","",""))
         departmentList.add(NumberModel("학생지원/생활관","",""))
-        departmentList.add(NumberModel("총학/신문","",""))
+        departmentList.add(NumberModel("학교자치기구","",""))
         departmentList.add(NumberModel("교내IT서비스관련","",""))
         departmentList.add(NumberModel("프런티어학부대학","",""))
         departmentList.add(NumberModel("공과대학","",""))

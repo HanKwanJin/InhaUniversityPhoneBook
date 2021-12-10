@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:fontFamily="@font/regular"
-        android:text="DongDong\nApp Develop"
+        android:text="DongDong\n(App Develop)"
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/firstProfileImageView"

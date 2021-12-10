@@ -24,19 +24,8 @@ import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
-    private val filterRecyclerView: RecyclerView by lazy {
-        findViewById(R.id.departmentRecyclerView)
-    }
-    //오리가 말하는 곳임 eidtText에 들어온 말
-    private val textView: TextView by lazy {
-        findViewById(R.id.textView)
-    }
-    private val backButton: AppCompatButton by lazy {
-        findViewById(R.id.backButton)
-    }
-    //즐겨찾기 오리버튼 -나중에 구현
-    private val favoriteButton: ImageButton by lazy {
-        findViewById(R.id.favoriteDuckButton)
+    private val logoImageButton: ImageButton by lazy {
+        findViewById(R.id.logoImageView)
     }
     private val numberFindEditText: EditText by lazy {
         findViewById(R.id.numberFindEditText)
@@ -53,6 +42,11 @@ class MainActivity : AppCompatActivity() {
 
         replaceFragment(fragmentSearch)
         replaceFragment(fragmentHome)
+
+
+        logoImageButton.setOnClickListener {
+            replaceFragment(fragmentHome)
+        }
 
         numberFindEditText.addTextChangedListener(object : TextWatcher{
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}

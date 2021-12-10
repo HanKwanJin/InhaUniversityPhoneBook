@@ -38,7 +38,7 @@ class Fragment14: Fragment(R.layout.fragment_number_list){
         fragmentNumberListBinding.backButton.setOnClickListener {
             (activity as MainActivity).replaceFragment(fragmentHome)
         }
-        fragmentNumberListBinding.textView.text = "총학/신문"
+        fragmentNumberListBinding.textView.text = "학교자치기구"
         fragmentNumberListBinding.departmentRecyclerView.adapter = departmentAdapter
         fragmentNumberListBinding.departmentRecyclerView.layoutManager = LinearLayoutManager(context)
 

@@ -11,7 +11,6 @@
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:background="@drawable/button_selector"
-        android:elevation="5dp"
         android:fontFamily="@font/regular"
         android:gravity="center"
         android:maxLines="1"
