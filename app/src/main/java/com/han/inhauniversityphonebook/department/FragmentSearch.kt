@@ -38,6 +38,7 @@ class FragmentSearch: Fragment(R.layout.fragment_number_list){
         fragmentNumberListBinding.backButton.setOnClickListener {
             (activity as MainActivity).replaceFragment(fragmentHome)
         }
+
         fragmentNumberListBinding.departmentRecyclerView.adapter = departmentAdapter
         fragmentNumberListBinding.departmentRecyclerView.layoutManager = LinearLayoutManager(context)
         fragmentNumberListBinding.textView.text = "검색결과 입니다!"
@@ -207,7 +208,4 @@ class FragmentSearch: Fragment(R.layout.fragment_number_list){
 
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-    }
 }

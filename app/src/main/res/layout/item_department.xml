@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"/>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/bookMarkButton"
+            android:id="@+id/favoriteButton"
             android:layout_width="30dp"
             android:layout_height="24dp"
             android:layout_marginStart="10dp"

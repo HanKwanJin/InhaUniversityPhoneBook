@@ -36,7 +36,7 @@ class FilterAdapter(myData: ArrayList<NumberModel>, val context: Context?, val o
 
 
     @SuppressLint("NotifyDataSetChanged")
-    public fun filter(charText: String){
+    fun filter(charText: String){
         charText.lowercase(Locale.getDefault())
 
         items?.clear()

@@ -49,6 +49,8 @@ class Fragment0: Fragment(R.layout.fragment_number_list){
             val dialogView = CallCustomDialog(name, numberForCopy, callNumber)
 
             activity?.let { it -> dialogView.show(it.supportFragmentManager, "call") }
+        }, duckClicked = {
+
         })
 
 
