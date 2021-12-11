@@ -3,6 +3,7 @@ package com.han.inhauniversityphonebook.department
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.han.inhauniversityphonebook.CallCustomDialog
@@ -29,11 +30,17 @@ class Fragment8: Fragment(R.layout.fragment_number_list){
             val name = it.name.toString()
             val numberForCopy = it.number.toString()
             val callNumber = it.call.toString()
-            val dialogView = CallCustomDialog(name, numberForCopy, callNumber)
+            val location = it.location.toString()
+            val dialogView = CallCustomDialog(name, numberForCopy, callNumber, location)
 
             activity?.let { it -> dialogView.show(it.supportFragmentManager, "call") }
+        }, duckClicked = {
+            Toast.makeText(context, "쉿! 개발중\uD83E\uDD2B", Toast.LENGTH_SHORT).show()
         })
-
+        val fragmentFavorite = FragmentFavorite()
+        fragmentNumberListBinding.favoriteDuckButton.setOnClickListener {
+            (activity as MainActivity).replaceFragment(fragmentFavorite)
+        }
         val fragmentHome = FragmentHome()
         fragmentNumberListBinding.backButton.setOnClickListener {
             (activity as MainActivity).replaceFragment(fragmentHome)
@@ -48,8 +55,8 @@ class Fragment8: Fragment(R.layout.fragment_number_list){
 
     private fun initList(){
         departmentList.clear()
-        departmentList.add(NumberModel("의예과","032-860-8191","0328608191"))
-        departmentList.add(NumberModel("간호학과","032-860-8200","0328608200"))
+        departmentList.add(NumberModel("의예과","032-860-8191","0328608191","5동 201호"))
+        departmentList.add(NumberModel("간호학과","032-860-8200","0328608200","5동 301호"))
 
     }
 }

@@ -13,7 +13,7 @@ import com.han.inhauniversityphonebook.adapter.DepartmentAdapter
 import com.han.inhauniversityphonebook.databinding.FragmentNumberListBinding
 import com.han.inhauniversityphonebook.model.NumberModel
 
-class Fragment11: Fragment(R.layout.fragment_number_list){
+class Fragment16: Fragment(R.layout.fragment_number_list){
     private var binding: FragmentNumberListBinding? = null
     private lateinit var departmentAdapter: DepartmentAdapter
     private val departmentList = mutableListOf<NumberModel>()
@@ -45,7 +45,8 @@ class Fragment11: Fragment(R.layout.fragment_number_list){
         fragmentNumberListBinding.backButton.setOnClickListener {
             (activity as MainActivity).replaceFragment(fragmentHome)
         }
-        fragmentNumberListBinding.textView.text = "국제학부"
+
+        fragmentNumberListBinding.textView.text = "교외"
         fragmentNumberListBinding.departmentRecyclerView.adapter = departmentAdapter
         fragmentNumberListBinding.departmentRecyclerView.layoutManager = LinearLayoutManager(context)
 
@@ -55,9 +56,11 @@ class Fragment11: Fragment(R.layout.fragment_number_list){
 
     private fun initList(){
         departmentList.clear()
-        departmentList.add(NumberModel("IBT학과","032-860-9125","0328609125","6호관 322A호"))
-        departmentList.add(NumberModel("ISE학과","032-860-9125","0328609125","6호관 322A호"))
-        departmentList.add(NumberModel("KLC학과","032-860-9125","0328609125","6호관 322A호"))
+
+
+
+
+
 
     }
 }

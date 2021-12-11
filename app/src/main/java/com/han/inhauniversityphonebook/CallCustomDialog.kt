@@ -19,9 +19,8 @@ import com.han.inhauniversityphonebook.databinding.BackDialogBinding
 import com.han.inhauniversityphonebook.databinding.CallDialogBinding
 import com.han.inhauniversityphonebook.model.NumberModel
 
-class CallCustomDialog(private val name: String ,private val numberForCopy: String, private val callNumber:String): DialogFragment() {
+class CallCustomDialog(private val name: String ,private val numberForCopy: String, private val callNumber:String, private val location:String): DialogFragment() {
     private var binding: CallDialogBinding? = null
-    private var inDuckText: String? = null
     private val copyText = mutableListOf<String>()
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,6 +34,8 @@ class CallCustomDialog(private val name: String ,private val numberForCopy: Stri
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         binding!!.departmentNameTextView.text = name
         binding!!.dialogNumberTextView.text = numberForCopy
+        binding!!.locationTextView.text = location
+
 
         binding!!.callIconButton.setOnClickListener {
             val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$callNumber"))

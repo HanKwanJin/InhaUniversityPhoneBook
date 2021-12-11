@@ -2,11 +2,15 @@ package com.han.inhauniversityphonebook.department
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.text.TextUtils.replace
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.han.inhauniversityphonebook.BackCustomDialog
+import com.han.inhauniversityphonebook.CustomContact
 import com.han.inhauniversityphonebook.MainActivity
 import com.han.inhauniversityphonebook.R
 import com.han.inhauniversityphonebook.adapter.DepartmentAdapter
@@ -20,6 +24,7 @@ class FragmentHome: Fragment(R.layout.fragment_home_list){
     private lateinit var homeListAdapter: HomeListAdapter
     private val departmentList = mutableListOf<NumberModel>()
     private val randomText = mutableListOf<String>()
+    private var count = 0
     @SuppressLint("NotifyDataSetChanged")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -48,8 +53,19 @@ class FragmentHome: Fragment(R.layout.fragment_home_list){
         val fragment13 = Fragment13()
         val fragment14 = Fragment14()
         val fragment15 = Fragment15()
+        val fragment16 = Fragment16()
+
         fragmentHomeListBinding.homeFavoriteDuckButton.setOnClickListener {
-            Toast.makeText(context, "오리 터치", Toast.LENGTH_SHORT).show()
+            count++
+            if(count == 7){
+                val customContact = CustomContact()
+                activity?.let { it -> customContact.show(it.supportFragmentManager, "contact") }
+                count = 0
+            }
+            Handler(Looper.getMainLooper()).postDelayed({
+                count = 0
+            }, 3000)
+
         }
         homeListAdapter = HomeListAdapter(onItemClicked = {
             when(it.name){
@@ -69,6 +85,7 @@ class FragmentHome: Fragment(R.layout.fragment_home_list){
                 "학생지원/생활관" -> replaceFragment(fragment13)
                 "학교자치기구" -> replaceFragment(fragment14)
                 "교내IT서비스관련" -> replaceFragment(fragment15)
+                "교외" -> replaceFragment(fragment16)
             }
         })
 
@@ -92,22 +109,23 @@ class FragmentHome: Fragment(R.layout.fragment_home_list){
 
     private fun initList(){
         departmentList.clear()
-        departmentList.add(NumberModel("전체","",""))
-        departmentList.add(NumberModel("학생지원/생활관","",""))
-        departmentList.add(NumberModel("학교자치기구","",""))
-        departmentList.add(NumberModel("교내IT서비스관련","",""))
-        departmentList.add(NumberModel("프런티어학부대학","",""))
-        departmentList.add(NumberModel("공과대학","",""))
-        departmentList.add(NumberModel("자연과학대학","",""))
-        departmentList.add(NumberModel("경영대학","",""))
-        departmentList.add(NumberModel("사범대학","",""))
-        departmentList.add(NumberModel("사회과학대학","",""))
-        departmentList.add(NumberModel("문과대학","",""))
-        departmentList.add(NumberModel("의과대학","",""))
-        departmentList.add(NumberModel("미래융합대학","",""))
-        departmentList.add(NumberModel("예술체육대학","",""))
-        departmentList.add(NumberModel("국제학부","",""))
-        departmentList.add(NumberModel("소프트웨어융합대학","",""))
+        departmentList.add(NumberModel("전체","","",""))
+        departmentList.add(NumberModel("학생지원/생활관","","",""))
+        departmentList.add(NumberModel("학교자치기구","","",""))
+        departmentList.add(NumberModel("교내IT서비스관련","","",""))
+        departmentList.add(NumberModel("프런티어학부대학","","",""))
+        departmentList.add(NumberModel("공과대학","","",""))
+        departmentList.add(NumberModel("자연과학대학","","",""))
+        departmentList.add(NumberModel("경영대학","","",""))
+        departmentList.add(NumberModel("사범대학","","",""))
+        departmentList.add(NumberModel("사회과학대학","","",""))
+        departmentList.add(NumberModel("문과대학","","",""))
+        departmentList.add(NumberModel("의과대학","","",""))
+        departmentList.add(NumberModel("미래융합대학","","",""))
+        departmentList.add(NumberModel("예술체육대학","","",""))
+        departmentList.add(NumberModel("국제학부","","",""))
+        departmentList.add(NumberModel("소프트웨어융합대학","","",""))
+        departmentList.add(NumberModel("교외","","",""))
 
     }
 

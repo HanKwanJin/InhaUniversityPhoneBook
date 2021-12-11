@@ -18,4 +18,5 @@
     <color name="eidtBackgroundColor">#6A7B8B</color>
     <drawable name="button_white">#FFFFFF</drawable>
     <drawable name="button_gray">#6A7B8B</drawable>
+    <color name="pink">#e63d7d</color>
 </resources>

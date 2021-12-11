@@ -6,6 +6,7 @@
     android:layout_marginBottom="5dp"
     android:background="@drawable/button_selector"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
         <TextView
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -13,7 +14,7 @@
             android:id="@+id/departmentNameTextView"
             android:fontFamily="@font/regular"
             android:textColor="@color/seleted_color"
-            android:lines="1"
+            android:maxLines="2"
             android:ellipsize="end"
             android:textSize="14sp"
             android:layout_margin="25dp"

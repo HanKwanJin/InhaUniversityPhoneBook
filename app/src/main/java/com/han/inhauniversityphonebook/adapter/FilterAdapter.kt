@@ -13,7 +13,7 @@ import com.han.inhauniversityphonebook.model.NumberModel
 import java.util.*
 import kotlin.collections.ArrayList
 
-class FilterAdapter(myData: ArrayList<NumberModel>, val context: Context?, val onItemClicked: (NumberModel) -> Unit): ListAdapter<NumberModel, FilterAdapter.ViewHolder>(diffUtil) {
+class FilterAdapter(myData: ArrayList<NumberModel>, val context: Context?, val onItemClicked: (NumberModel) -> Unit,val duckClicked: () -> Unit): ListAdapter<NumberModel, FilterAdapter.ViewHolder>(diffUtil) {
     private var items: ArrayList<NumberModel> ?= null
     private val arrayList = ArrayList<NumberModel>()
     init {
@@ -26,8 +26,12 @@ class FilterAdapter(myData: ArrayList<NumberModel>, val context: Context?, val o
             binding.root.setOnClickListener {
                 onItemClicked(numberModel)
             }
+            binding.favoriteButton.setOnClickListener {
+                duckClicked()
+            }
             binding.departmentNameTextView.text = numberModel.name
             binding.departmentNumberTextView.text = numberModel.number
+            binding.departmentLocationTextView.text = numberModel.location
 
 
         }

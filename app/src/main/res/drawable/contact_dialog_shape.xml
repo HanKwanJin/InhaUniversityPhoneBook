@@ -3,9 +3,8 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="rectangle">
-            <corners android:radius="10dp"/>
         </shape>
     </item>
 
-    <item android:drawable="@drawable/back_dialog_background"/>
+    <item android:drawable="@drawable/contact"/>
 </layer-list>

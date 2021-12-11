@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    android:background="@drawable/back_dialog_shape">
+    android:background="@drawable/contact_dialog_shape">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/topLayout"
@@ -24,52 +24,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageButton
-            android:id="@+id/logoutButton"
+            android:id="@+id/contactButton"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:scaleType="fitXY"
             android:layout_marginStart="5dp"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/logout"
+            android:background="@drawable/link"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/homeBackButton"
+            app:layout_constraintEnd_toStartOf="@+id/backButton"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/logoutTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/regular"
-            android:text="GoodBye"
-            android:textColor="#FFE398"
-            android:textSize="8sp"
-            app:layout_constraintEnd_toEndOf="@+id/logoutButton"
-            app:layout_constraintStart_toStartOf="@+id/logoutButton"
-            app:layout_constraintTop_toBottomOf="@+id/logoutButton" />
 
 
         <ImageButton
-            android:id="@+id/homeBackButton"
+            android:scaleType="fitXY"
+            android:id="@+id/backButton"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/home"
+            android:background="@drawable/back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/logoutButton" />
+            app:layout_constraintStart_toEndOf="@+id/contactButton" />
 
 
-        <TextView
-            android:id="@+id/homeTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/regular"
-            android:text="HOME"
-            android:textColor="#FFE398"
-            android:textSize="8sp"
-            app:layout_constraintEnd_toEndOf="@+id/homeBackButton"
-            app:layout_constraintStart_toStartOf="@+id/homeBackButton"
-            app:layout_constraintTop_toBottomOf="@+id/homeBackButton" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
