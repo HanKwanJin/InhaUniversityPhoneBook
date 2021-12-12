@@ -56,8 +56,10 @@ class Fragment14: Fragment(R.layout.fragment_number_list){
     private fun initList(){
         departmentList.clear()
         departmentList.add(NumberModel("총학생회","032-860-8451","0328608451","학생회관 407호"))
-        departmentList.add(NumberModel("인하대학신문사","032-860-8321","0328608321","7-417호"))
         departmentList.add(NumberModel("총대의원회","032-860-8462","0328608462","학생회관 453호"))
+        departmentList.add(NumberModel("동아리연합회","010-5685-0207","01056850207","동아리연합회"))
+        departmentList.add(NumberModel("졸업준비학생회","032-860-8460","0328608460","학생회관 4층"))
+        departmentList.add(NumberModel("생활도서관","032-860-8472","0328608472","학생회관 410호"))
 
 
 

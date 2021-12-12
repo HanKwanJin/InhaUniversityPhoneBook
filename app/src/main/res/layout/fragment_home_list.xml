@@ -6,18 +6,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/noduck_blue">
 
-    <ImageButton
-        android:id="@+id/homeFavoriteDuckButton"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="16dp"
-        android:background="#00000000"
-        android:scaleType="fitXY"
-        android:src="@drawable/duckicon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/homeRecyclerView"
-        app:layout_constraintTop_toBottomOf="@+id/randomTextView" />
-
     <TextView
         android:id="@+id/randomTextView"
         android:layout_width="wrap_content"
@@ -33,15 +21,41 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <ImageButton
+        android:id="@+id/homeFavoriteDuckButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:background="#00000000"
+        android:scaleType="fitXY"
+        android:src="@drawable/duckicon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/searchViewButton"
+        app:layout_constraintTop_toBottomOf="@+id/randomTextView" />
 
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/searchViewButton"
+        app:layout_constraintStart_toStartOf="@+id/homeRecyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/homeRecyclerView"
+        android:text="인물통합검색"
+        android:layout_marginBottom="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/homeFavoriteDuckButton"
+        app:layout_constraintBottom_toTopOf="@+id/homeRecyclerView"
+        android:fontFamily="@font/regular"
+        android:background="@drawable/search_button"
+        android:layout_width="160dp"
+        android:layout_height="35dp"/>
     <androidx.recyclerview.widget.RecyclerView
         tools:listitem="@layout/item_home"
         android:id="@+id/homeRecyclerView"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/searchViewButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -56,22 +56,50 @@ class FragmentSearch: Fragment(R.layout.fragment_number_list){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         departmentList.clear()
-        //학생지원,생활관
+        //교무처
+        departmentList.add(NumberModel("학사관리팀1","032-860-7041","0328607041","7-303A"))
+        departmentList.add(NumberModel("학사관리팀2","032-860-7042","0328607042","7-303A"))
+        departmentList.add(NumberModel("학사관리팀3","032-860-7043","0328607043","7-303A"))
+        departmentList.add(NumberModel("학사관리팀4","032-860-7044","0328607044","7-303A"))
+        departmentList.add(NumberModel("학사관리팀5","032-860-7045","0328607045","7-303A"))
+        departmentList.add(NumberModel("학사관리팀6","032-860-7046","0328607046","7-303A"))
+        departmentList.add(NumberModel("학사관리팀7","032-860-7047","0328607047","7-303A"))
+        departmentList.add(NumberModel("학사관리팀8","032-860-7048","0328607048","7-303A"))
+
+        departmentList.add(NumberModel("교육기획팀1","032-860-8100","0328608100","1-123호"))
+        departmentList.add(NumberModel("교육기획팀2","032-860-8101","0328608101","1-123호"))
+        departmentList.add(NumberModel("교육기획팀3","032-860-8102","0328608102","1-123호"))
+        departmentList.add(NumberModel("교육기획팀4","032-860-8103","0328608103","1-123호"))
+        departmentList.add(NumberModel("교육기획팀5","032-860-8104","0328608104","1-123호"))
+        departmentList.add(NumberModel("교육기획팀6","032-860-8105","0328608105","1-123호"))
+        departmentList.add(NumberModel("교육기획팀7","032-860-8106","0328608106","1-123호"))
+        departmentList.add(NumberModel("교육기획팀8","032-860-8107","0328608107","1-123호"))
+
+        departmentList.add(NumberModel("교육효과성센터1","032-860-9315","0328609315","1-422A호"))
+        departmentList.add(NumberModel("교육효과성센터2","032-860-9316","0328609316","1-422A호"))
+        departmentList.add(NumberModel("교육효과성센터3","032-860-9317","0328609317","1-422A호"))
+
+        departmentList.add(NumberModel("교원인사팀1","032-860-7051","0328607051","1-142호"))
+        departmentList.add(NumberModel("교원인사팀2","032-860-7052","0328607052","1-142호"))
+        departmentList.add(NumberModel("교원인사팀3","032-860-7053","0328607053","1-142호"))
+        departmentList.add(NumberModel("교원인사팀4","032-860-7054","0328607054","1-142호"))
+        departmentList.add(NumberModel("교원인사팀5","032-860-7055","0328607055","1-142호"))
+        departmentList.add(NumberModel("교원인사팀6","032-860-7056","0328607056","1-142호"))
+        departmentList.add(NumberModel("교원인사팀7","032-860-7057","0328607057","1-142호"))
+
+        departmentList.add(NumberModel("교수학습개발센터1","032-860-7023","0328607023","60주년-1307호"))
+        departmentList.add(NumberModel("교수학습개발센터2","032-860-7024","0328607024","60주년-1307호"))
+
+        departmentList.add(NumberModel("원격교육지원센터1","032-860-7025","0328607025","60주년-1307호"))
+        departmentList.add(NumberModel("원격교육지원센터2","032-860-8919","0328608919","60주년-1307호"))
+
+
+        //학생지원
         departmentList.add(NumberModel("긴급전화\n(24시간)","032-860-9119","0328609119","-"))
         departmentList.add(NumberModel("대학건강센터1","032-860-8311","0328608311","학생회관 2층 215호"))
         departmentList.add(NumberModel("대학건강센터2","032-860-8312","0328608312","학생회관 2층 215호"))
 
-        departmentList.add(NumberModel("1생활관(1)","032-860-8317","0328608317","제1생활관 141호"))
-        departmentList.add(NumberModel("1생활관(2)","032-860-8319","0328608319","제1생활관 141호"))
-        departmentList.add(NumberModel("1생활관 당직(긴급)","032-860-8378","0328608378","1관 당직실(야간)"))
-
-        departmentList.add(NumberModel("2생활관(1)","032-860-7273","0328607273","제2생활관 103호"))
-        departmentList.add(NumberModel("2생활관(2)","032-860-7274","0328607274","제2생활관 103호"))
-
-        //추가됨
-        departmentList.add(NumberModel("3생활관","032-860-7275","0328607275","제2생활관 103호"))
-        //
-        departmentList.add(NumberModel("2,3생활관 당직(긴급)","032-860-8634","0328608634","2,3관 당직실(야간)"))
+        departmentList.add(NumberModel("종합상황실","032-860-8597","0328608597","본관 1층 로비"))
 
         departmentList.add(NumberModel("학생지원팀1","032-860-7063","0328607063","7-343호"))
         departmentList.add(NumberModel("학생지원팀2","032-860-7064","0328607064","7-343호"))
@@ -83,21 +111,16 @@ class FragmentSearch: Fragment(R.layout.fragment_number_list){
         departmentList.add(NumberModel("장학복지팀2\n(학부)","032-860-7074","0328607074","7-343호"))
         departmentList.add(NumberModel("장학복지팀3\n(학부)","032-860-7075","0328607075","7-343호"))
         departmentList.add(NumberModel("장학복지팀4\n(학부)","032-860-7076","0328607076","7-343호"))
-
-        //추가됨
         departmentList.add(NumberModel("장학복지팀\n(대학원)","032-860-8385","0328608385","7-343호"))
         departmentList.add(NumberModel("장학복지팀\n(근로)","032-860-8447","0328608447","7-343호"))
-        //
 
         departmentList.add(NumberModel("예비군연대본부1","032-860-8307","0328608307","7-347호"))
         departmentList.add(NumberModel("예비군연대본부2","032-860-8308","0328608308","7-347호"))
         departmentList.add(NumberModel("예비군연대본부3","032-860-8309","0328608309","7-347호"))
 
-        //추가됨
         departmentList.add(NumberModel("체육지원팀1","032-860-7070","0328607070","제2생활관 옆 운동부숙소 131호"))
         departmentList.add(NumberModel("체육지원팀2","032-860-7071","0328607071","제2생활관 옆 운동부숙소 131호"))
         departmentList.add(NumberModel("체육지원팀3","032-860-7072","0328607072","제2생활관 옆 운동부숙소 131호"))
-        //
 
         departmentList.add(NumberModel("학생상담실1","032-860-8262","0328608262","정석학술정보관 521호"))
         departmentList.add(NumberModel("학생상담실2","032-860-8263","0328608263","정석학술정보관 521호"))
@@ -108,12 +131,73 @@ class FragmentSearch: Fragment(R.layout.fragment_number_list){
         departmentList.add(NumberModel("장애인학생지원실4","032-860-7066","0328607066","7-335A호"))
         departmentList.add(NumberModel("장애인학생지원실5","032-860-7067","0328607067","7-335A호"))
 
-        //총학,신문
-        departmentList.add(NumberModel("총학생회","032-860-8451","0328608451","학생회관 407호"))
-        departmentList.add(NumberModel("인하대학신문사","032-860-8321","0328608321","7-417호"))
-        departmentList.add(NumberModel("총대의원회","032-860-8462","0328608462","학생회관 453호"))
+        //사무처
+        departmentList.add(NumberModel("총무팀1","032-860-7093","0328607093","1-101호"))
+        departmentList.add(NumberModel("총무팀2","032-860-7094","0328607094","1-101호"))
+        departmentList.add(NumberModel("총무팀3","032-860-7095","0328607095","1-101호"))
+        departmentList.add(NumberModel("총무팀4","032-860-7096","0328607096","1-101호"))
+        departmentList.add(NumberModel("총무팀5","032-860-7097","0328607097","1-101호"))
+        departmentList.add(NumberModel("총무팀6","032-860-7098","0328607098","1-101호"))
+        departmentList.add(NumberModel("총무팀7","032-860-7099","0328607099","1-101호"))
 
-        //교내IT서비스관련
+        departmentList.add(NumberModel("구매자산팀1","032-860-7116","0328607116","1-101호"))
+        departmentList.add(NumberModel("구매자산팀2","032-860-7117","0328607117","1-101호"))
+        departmentList.add(NumberModel("구매자산팀3","032-860-8881","0328608881","1-101호"))
+        departmentList.add(NumberModel("구매자산팀4","032-860-8882","0328608882","1-101호"))
+
+        departmentList.add(NumberModel("시설안전팀1","032-860-7106","0328607106","1-101B호"))
+        departmentList.add(NumberModel("시설안전팀2","032-860-7107","0328607107","1-101B호"))
+        departmentList.add(NumberModel("시설안전팀3","032-860-7108","0328607108","1-101B호"))
+        departmentList.add(NumberModel("시설안전팀4","032-860-7109","0328607109","1-101B호"))
+        departmentList.add(NumberModel("시설안전팀5","032-860-7110","0328607110","1-101B호"))
+        departmentList.add(NumberModel("시설안전팀6","032-860-7111","0328607111","1-101B호"))
+        departmentList.add(NumberModel("시설안전팀7","032-860-7112","0328607112","1-101B호"))
+
+        departmentList.add(NumberModel("재무팀1","032-860-7124","0328607124","1-140호"))
+        departmentList.add(NumberModel("재무팀2","032-860-7125","0328607125","1-140호"))
+        departmentList.add(NumberModel("재무팀3","032-860-7126","0328607126","1-140호"))
+        departmentList.add(NumberModel("재무팀4","032-860-7127","0328607127","1-140호"))
+        departmentList.add(NumberModel("재무팀5","032-860-7128","0328607128","1-140호"))
+        departmentList.add(NumberModel("재무팀6","032-860-7129","0328607129","1-140호"))
+        departmentList.add(NumberModel("재무팀7","032-860-7130","0328607130","1-140호"))
+        departmentList.add(NumberModel("재무팀8","032-860-7131","0328607131","1-140호"))
+        departmentList.add(NumberModel("재무팀9","032-860-7132","0328607132","1-140호"))
+        departmentList.add(NumberModel("재무팀10","032-860-7133","0328607133","1-140호"))
+        departmentList.add(NumberModel("재무팀11","032-860-7134","0328607134","1-140호"))
+        departmentList.add(NumberModel("재무팀12","032-860-7135","0328607135","1-140호"))
+        departmentList.add(NumberModel("재무팀13","032-860-7136","0328607136","1-140호"))
+        departmentList.add(NumberModel("재무팀14","032-860-7137","0328607137","1-140호"))
+        departmentList.add(NumberModel("재무팀15","032-860-7138","0328607138","1-140호"))
+        departmentList.add(NumberModel("재무팀16","032-860-7139","0328607139","1-140호"))
+
+        //기획처
+        departmentList.add(NumberModel("전략기획팀1","032-860-7142","0328607142","1-332호"))
+        departmentList.add(NumberModel("전략기획팀2","032-860-7143","0328607143","1-332호"))
+        departmentList.add(NumberModel("전략기획팀3","032-860-7144","0328607144","1-332호"))
+        departmentList.add(NumberModel("전략기획팀4","032-860-7145","0328607145","1-332호"))
+        departmentList.add(NumberModel("전략기획팀5","032-860-7146","0328607146","1-332호"))
+        departmentList.add(NumberModel("전략기획팀6","032-860-7147","0328607147","1-332호"))
+        departmentList.add(NumberModel("전략기획팀7","032-860-7148","0328607148","1-332호"))
+        departmentList.add(NumberModel("전략기획팀8","032-860-7149","0328607149","1-332호"))
+
+        departmentList.add(NumberModel("감사팀1","032-860-9310","0328609310","1-330호"))
+        departmentList.add(NumberModel("감사팀2","032-860-9312","0328609312","1-330호"))
+        departmentList.add(NumberModel("감사팀3","032-860-9313","0328609313","1-330호"))
+
+        departmentList.add(NumberModel("캠퍼스공간팀1","032-860-7158","0328607158","1-427호"))
+        departmentList.add(NumberModel("캠퍼스공간팀2","032-860-7159","0328607159","1-427호"))
+
+        //정보통신처
+        departmentList.add(NumberModel("IT개발팀1","032-860-9060","0328609060","60주년 기념관 1408호"))
+        departmentList.add(NumberModel("IT개발팀2","032-860-9061","0328609061","60주년 기념관 1408호"))
+        departmentList.add(NumberModel("IT개발팀3","032-860-9062","0328609062","60주년 기념관 1408호"))
+        departmentList.add(NumberModel("IT개발팀4","032-860-9063","0328609063","60주년 기념관 1408호"))
+        departmentList.add(NumberModel("IT개발팀5","032-860-9064","0328609064","60주년 기념관 1408호"))
+        departmentList.add(NumberModel("IT개발팀6","032-860-9065","0328609065","60주년 기념관 1408호"))
+        departmentList.add(NumberModel("IT개발팀7","032-860-9066","0328609066","60주년 기념관 1408호"))
+        departmentList.add(NumberModel("IT개발팀8","032-860-9067","0328609067","60주년 기념관 1408호"))
+        departmentList.add(NumberModel("IT개발팀9","032-860-9087","0328609087","60주년 기념관 1408호"))
+
         departmentList.add(NumberModel("IT서비스팀1","032-860-9081","0328609081","60주년 기념관 1408호"))
         departmentList.add(NumberModel("IT서비스팀2","032-860-9082","0328609082","60주년 기념관 1408호"))
         departmentList.add(NumberModel("IT서비스팀3","032-860-9083","0328609083","60주년 기념관 1408호"))
@@ -122,6 +206,70 @@ class FragmentSearch: Fragment(R.layout.fragment_number_list){
         departmentList.add(NumberModel("IT서비스팀6","032-860-9086","0328609086","60주년 기념관 1408호"))
         departmentList.add(NumberModel("IT서비스팀7","032-860-9087","0328609087","60주년 기념관 1408호"))
         departmentList.add(NumberModel("IT서비스팀8","032-860-9088","0328609088","60주년 기념관 1408호"))
+
+        departmentList.add(NumberModel("IT인프라팀1","032-860-9052","0328609052","60주년 기념관 1408호"))
+        departmentList.add(NumberModel("IT인프라팀2","032-860-9053","0328609053","60주년 기념관 1408호"))
+        departmentList.add(NumberModel("IT인프라팀3","032-860-9054","0328609054","60주년 기념관 1408호"))
+        departmentList.add(NumberModel("IT인프라팀4","032-860-9055","0328609055","60주년 기념관 1408호"))
+        departmentList.add(NumberModel("IT인프라팀5","032-860-9056","0328609056","60주년 기념관 1408호"))
+        departmentList.add(NumberModel("IT인프라팀6","032-860-9091","0328609091","60주년 기념관 1408호"))
+        departmentList.add(NumberModel("IT인프라팀7","032-860-9092","0328609092","60주년 기념관 1408호"))
+
+        //입학처
+        departmentList.add(NumberModel("입학팀1","032-860-7221","0328607221","1-130호"))
+        departmentList.add(NumberModel("입학팀2","032-860-7222","0328607222","1-130호"))
+        departmentList.add(NumberModel("입학팀3","032-860-7223","0328607223","1-130호"))
+        departmentList.add(NumberModel("입학팀4","032-860-7224","0328607224","1-130호"))
+        departmentList.add(NumberModel("입학팀5","032-860-7225","0328607225","1-130호"))
+        departmentList.add(NumberModel("입학팀6","032-860-9231","0328609231","1-130호"))
+        departmentList.add(NumberModel("입학팀7","032-860-9232","0328609232","1-130호"))
+
+        //대외협력처
+        departmentList.add(NumberModel("대외홍보팀1","032-860-7193","0328607193","인하드림센터 504호"))
+        departmentList.add(NumberModel("대외홍보팀2","032-860-7194","0328607194","인하드림센터 504호"))
+        departmentList.add(NumberModel("대외홍보팀3","032-860-7195","0328607195","인하드림센터 504호"))
+
+        departmentList.add(NumberModel("발전협력팀1","032-860-7104","0328607104","1-123호"))
+        departmentList.add(NumberModel("발전협력팀2","032-860-7159","0328607159","1-123호"))
+        departmentList.add(NumberModel("발전협력팀3","032-860-7196","0328607196","1-123호"))
+        departmentList.add(NumberModel("발전협력팀4","032-860-7197","0328607197","1-123호"))
+
+        //국제처
+        departmentList.add(NumberModel("국제교류팀1","032-860-7031","0328607031","7-313호"))
+        departmentList.add(NumberModel("국제교류팀2","032-860-7032","0328607032","7-313호"))
+        departmentList.add(NumberModel("국제교류팀3","032-860-7033","0328607033","7-313호"))
+        departmentList.add(NumberModel("국제교류팀4","032-860-7034","0328607034","7-313호"))
+
+        departmentList.add(NumberModel("국제지원팀1","032-860-7035","0328607035","7-505호"))
+        departmentList.add(NumberModel("국제지원팀2","032-860-7036","0328607036","7-505호"))
+        departmentList.add(NumberModel("국제지원팀3","032-860-7037","0328607037","7-505호"))
+        departmentList.add(NumberModel("국제지원팀4","032-860-7038","0328607038","7-505호"))
+        departmentList.add(NumberModel("국제지원팀5","032-860-7039","0328607039","7-505호"))
+
+        //생활관
+        departmentList.add(NumberModel("1생활관(1)","032-860-8317","0328608317","제1생활관 141호"))
+        departmentList.add(NumberModel("1생활관(2)","032-860-8319","0328608319","제1생활관 141호"))
+        departmentList.add(NumberModel("1생활관 당직(긴급)","032-860-8378","0328608378","1관 당직실(야간)"))
+        departmentList.add(NumberModel("2생활관(1)","032-860-7273","0328607273","제2생활관 103호"))
+        departmentList.add(NumberModel("2생활관(2)","032-860-7274","0328607274","제2생활관 103호"))
+        departmentList.add(NumberModel("3생활관","032-860-7275","0328607275","제2생활관 103호"))
+        departmentList.add(NumberModel("2,3생활관 당직(긴급)","032-860-8634","0328608634","2,3관 당직실(야간)"))
+
+
+        //학생자치기구
+        departmentList.add(NumberModel("총학생회","032-860-8451","0328608451","학생회관 407호"))
+        departmentList.add(NumberModel("총대의원회","032-860-8462","0328608462","학생회관 453호"))
+        departmentList.add(NumberModel("동아리연합회","010-5685-0207","01056850207","동아리연합회"))
+        departmentList.add(NumberModel("졸업준비학생회","032-860-8460","0328608460","학생회관 4층"))
+        departmentList.add(NumberModel("생활도서관","032-860-8472","0328608472","학생회관 410호"))
+
+        //신문사&방송국
+        departmentList.add(NumberModel("인하대학신문사","032-860-8321","0328608321","7-417호"))
+        departmentList.add(NumberModel("인하대방속국1","032-860-8325","0328608325","학생회관 3층"))
+        departmentList.add(NumberModel("인하대방속국2","032-860-8326","0328608326","학생회관 3층"))
+
+
+
 
         //프런티어학부대학
         departmentList.add(NumberModel("학부대학 행정실 총괄","032-860-9252","0328609252","60주년 1306호"))
@@ -145,8 +293,8 @@ class FragmentSearch: Fragment(R.layout.fragment_number_list){
         departmentList.add(NumberModel("사회인프라공학과","032-860-7560","0328607560","2남 207호"))
         departmentList.add(NumberModel("환경공학과","032-860-7500","0328607500","2동 441호"))
         departmentList.add(NumberModel("공간정보공학과","032-860-7600","0328607600","4호관 302호"))
-        departmentList.add(NumberModel("건축학부(건축공학)","032-860-7580","0328607580","2남 413호"))
-        departmentList.add(NumberModel("건축학부(건축학)","032-860-8710","0328608710","2남 413호"))
+        departmentList.add(NumberModel("건축학부\n(건축공학)","032-860-7580","0328607580","2남 413호"))
+        departmentList.add(NumberModel("건축학부\n(건축학)","032-860-8710","0328608710","2남 413호"))
         departmentList.add(NumberModel("에너지자원공학과","032-860-7550","0328607550","2남 215호"))
         departmentList.add(NumberModel("융합기술경영학부","032-860-8871","0328608871","미래융합대학관 106호"))
         departmentList.add(NumberModel("전기공학과","032-860-7390","0328607390","하이테크센터 603호"))
@@ -226,6 +374,22 @@ class FragmentSearch: Fragment(R.layout.fragment_number_list){
         departmentList.add(NumberModel("스마트모빌리티공학과","032-860-9440","0328609440","본관 516호"))
         departmentList.add(NumberModel("디자인테크놀로지학과","032-860-9440","0328609440","본관 516호"))
         departmentList.add(NumberModel("컴퓨터공학과","032-860-7440","0328607440","하이테크센터 1012호"))
+
+        //교외
+        departmentList.add(NumberModel("야생동물구조관리센터1(인천)", "032-858-9702","0328589702","연수구 송도국제대로 372번길21"))
+        departmentList.add(NumberModel("야생동물구조관리센터2(인천)", "032-858-9703","0328589703","연수구 송도국제대로 372번길21"))
+        departmentList.add(NumberModel("야생동물구조관리센터3(인천)", "032-858-9704","0328589704","연수구 송도국제대로 372번길21"))
+        departmentList.add(NumberModel("미추홀구청", "032-887-1011","0328871011","미추홀구 동적이로95"))
+        departmentList.add(NumberModel("인하대부속병원", "032-890-2114","0328902114","중구 인항로27"))
+        departmentList.add(NumberModel("미추홀구 보건소1", "032-880-5455","0328805455","미추홀구 주안서로25"))
+        departmentList.add(NumberModel("미추홀구 보건소2", "032-880-5456","0328805456","미추홀구 주안서로25"))
+        departmentList.add(NumberModel("미추홀구 보건소3", "032-880-5457","0328805457","미추홀구 주안서로25"))
+        departmentList.add(NumberModel("미추홀소방서", "032-870-3214","0328703214","미추홀구 인하로190"))
+        departmentList.add(NumberModel("미추홀경찰서", "182","182","미추홀구 매소홀로290번길32"))
+        departmentList.add(NumberModel("한국장학재단", "1599-2000","15992000","대구광역시 동구 신암로125"))
+        departmentList.add(NumberModel("KEB하나은행\n(인하대)", "032-863-1111","0328631111","학생회관 2층"))
+        departmentList.add(NumberModel("대학서적\n(인하대)", "032-868-9667","0328689667","학생회관 1층"))
+        departmentList.add(NumberModel("하텍 인쇄실 2층", "010-8508-3975","01085083975","하이테크관 2층"))
 
     }
 

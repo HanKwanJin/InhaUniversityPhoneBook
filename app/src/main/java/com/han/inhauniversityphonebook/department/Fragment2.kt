@@ -24,6 +24,7 @@ class Fragment2: Fragment(R.layout.fragment_number_list){
         super.onViewCreated(view, savedInstanceState)
 
         initList()
+        departmentList.sortBy { it.name }
         val fragmentNumberListBinding = FragmentNumberListBinding.bind(view)
         binding = fragmentNumberListBinding
 
@@ -68,8 +69,8 @@ class Fragment2: Fragment(R.layout.fragment_number_list){
         departmentList.add(NumberModel("사회인프라공학과","032-860-7560","0328607560","2남 207호"))
         departmentList.add(NumberModel("환경공학과","032-860-7500","0328607500","2동 441호"))
         departmentList.add(NumberModel("공간정보공학과","032-860-7600","0328607600","4호관 302호"))
-        departmentList.add(NumberModel("건축학부(건축공학)","032-860-7580","0328607580","2남 413호"))
-        departmentList.add(NumberModel("건축학부(건축학)","032-860-8710","0328608710","2남 413호"))
+        departmentList.add(NumberModel("건축학부\n(건축공학)","032-860-7580","0328607580","2남 413호"))
+        departmentList.add(NumberModel("건축학부\n(건축학)","032-860-8710","0328608710","2남 413호"))
         departmentList.add(NumberModel("에너지자원공학과","032-860-7550","0328607550","2남 215호"))
         departmentList.add(NumberModel("융합기술경영학부","032-860-8871","0328608871","미래융합대학관 106호"))
         departmentList.add(NumberModel("전기공학과","032-860-7390","0328607390","하이테크센터 603호"))

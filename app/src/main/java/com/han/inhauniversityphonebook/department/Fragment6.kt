@@ -23,6 +23,7 @@ class Fragment6: Fragment(R.layout.fragment_number_list){
         super.onViewCreated(view, savedInstanceState)
 
         initList()
+        departmentList.sortBy { it.name }
         val fragmentNumberListBinding = FragmentNumberListBinding.bind(view)
         binding = fragmentNumberListBinding
 

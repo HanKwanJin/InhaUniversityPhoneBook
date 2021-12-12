@@ -59,17 +59,8 @@ class Fragment13: Fragment(R.layout.fragment_number_list){
         departmentList.add(NumberModel("대학건강센터1","032-860-8311","0328608311","학생회관 2층 215호"))
         departmentList.add(NumberModel("대학건강센터2","032-860-8312","0328608312","학생회관 2층 215호"))
 
-        departmentList.add(NumberModel("1생활관(1)","032-860-8317","0328608317","제1생활관 141호"))
-        departmentList.add(NumberModel("1생활관(2)","032-860-8319","0328608319","제1생활관 141호"))
-        departmentList.add(NumberModel("1생활관 당직(긴급)","032-860-8378","0328608378","1관 당직실(야간)"))
+        departmentList.add(NumberModel("종합상황실","032-860-8597","0328608597","본관 1층 로비"))
 
-        departmentList.add(NumberModel("2생활관(1)","032-860-7273","0328607273","제2생활관 103호"))
-        departmentList.add(NumberModel("2생활관(2)","032-860-7274","0328607274","제2생활관 103호"))
-
-        //추가됨
-        departmentList.add(NumberModel("3생활관","032-860-7275","0328607275","제2생활관 103호"))
-        //
-        departmentList.add(NumberModel("2,3생활관 당직(긴급)","032-860-8634","0328608634","2,3관 당직실(야간)"))
 
         departmentList.add(NumberModel("학생지원팀1","032-860-7063","0328607063","7-343호"))
         departmentList.add(NumberModel("학생지원팀2","032-860-7064","0328607064","7-343호"))
@@ -81,21 +72,16 @@ class Fragment13: Fragment(R.layout.fragment_number_list){
         departmentList.add(NumberModel("장학복지팀2\n(학부)","032-860-7074","0328607074","7-343호"))
         departmentList.add(NumberModel("장학복지팀3\n(학부)","032-860-7075","0328607075","7-343호"))
         departmentList.add(NumberModel("장학복지팀4\n(학부)","032-860-7076","0328607076","7-343호"))
-
-        //추가됨
         departmentList.add(NumberModel("장학복지팀\n(대학원)","032-860-8385","0328608385","7-343호"))
         departmentList.add(NumberModel("장학복지팀\n(근로)","032-860-8447","0328608447","7-343호"))
-        //
 
         departmentList.add(NumberModel("예비군연대본부1","032-860-8307","0328608307","7-347호"))
         departmentList.add(NumberModel("예비군연대본부2","032-860-8308","0328608308","7-347호"))
         departmentList.add(NumberModel("예비군연대본부3","032-860-8309","0328608309","7-347호"))
 
-        //추가됨
         departmentList.add(NumberModel("체육지원팀1","032-860-7070","0328607070","제2생활관 옆 운동부숙소 131호"))
         departmentList.add(NumberModel("체육지원팀2","032-860-7071","0328607071","제2생활관 옆 운동부숙소 131호"))
         departmentList.add(NumberModel("체육지원팀3","032-860-7072","0328607072","제2생활관 옆 운동부숙소 131호"))
-        //
 
         departmentList.add(NumberModel("학생상담실1","032-860-8262","0328608262","정석학술정보관 521호"))
         departmentList.add(NumberModel("학생상담실2","032-860-8263","0328608263","정석학술정보관 521호"))
