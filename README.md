@@ -24,16 +24,16 @@
 
 ✔ [교외 번호, 위치 찾기🔎](#-교외-번호-위치-찾기)
 
-## 🛠 인물통합검색
+## 😀 인물통합검색
 ![dongdongmei](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fr6kbh%2FbtrnQ5RK30E%2FuO8c4AjMdgdeqnbblQ54b0%2Fimg.png) ![dongdongmei](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F6egfh%2FbtrnQ5qGhOw%2FeqkKDRRU1uDe1bXV2ES800%2Fimg.png)
 
 - **인물통합검색 버튼을 눌러서 들어가면 웹뷰를 통해 인하대학교 인물통합검색 페이지로 연결 시켜 교수님의 번호나 위치가 궁금할 경우 찾아볼 수 있습니다** ❗
 
-## 🛠 교내 번호, 위치 찾기
+## 😀 교내 번호, 위치 찾기
 ![dongdongmei](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FO1w4f%2FbtrnQjJuPsc%2FKxDKlFihwS3BXNXSabHbiK%2Fimg.png) ![dongdongmei](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FceBjwt%2FbtrnL7wciU3%2FSo8CweqaVLji5dIIL9dvYk%2Fimg.png)
 
 - **찾고자 하는 교내 번호가 포함된 [카테고리](#-카테고리-종류)에 들어가서 번호를 찾아도 되고 필터링 기능을 이용한 검색을 통해서도 찾을 수 있도록 하였습니다** ❗
-## 🛠 교외 번호, 위치 찾기
+## 😀 교외 번호, 위치 찾기
 ![dongdongmei](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fu7bnL%2FbtrnOPPAPzz%2FzHH1OzjXlHCw69QBiw3tn0%2Fimg.png) 
 
 - **찾고자 하는 [교외 번호 카테고리](#-카테고리-종류)에 들어가서 번호를 찾아도 되고 필터링 기능을 이용한 검색을 통해서도 찾을 수 있도록 하였습니다** ❗
