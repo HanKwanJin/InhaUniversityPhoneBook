@@ -68,7 +68,7 @@ class Fragment16: Fragment(R.layout.fragment_number_list){
         departmentList.add(NumberModel("미추홀경찰서", "182","182","미추홀구 매소홀로290번길32"))
         departmentList.add(NumberModel("한국장학재단", "1599-2000","15992000","대구광역시 동구 신암로125"))
         departmentList.add(NumberModel("KEB하나은행\n(인하대)", "032-863-1111","0328631111","학생회관 2층"))
-        departmentList.add(NumberModel("대학서적\n(인하대)", "032-868-9667","0328689667","학생회관 1층"))
+        departmentList.add(NumberModel("대학서적\n(인하대 서점)", "032-868-9667","0328689667","학생회관 1층"))
         departmentList.add(NumberModel("하텍 인쇄실 2층", "010-8508-3975","01085083975","하이테크관 2층"))
 
 
