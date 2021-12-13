@@ -24,6 +24,8 @@
 
 ✔ [교외 번호, 위치 찾기🔎](#-교외-번호-위치-찾기)
 
+✔ [전화 걸기, 번호 복사 📱](#-전화-걸기-번호-복사)
+
 ## 😀 인물통합검색
 ![dongdongmei](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fr6kbh%2FbtrnQ5RK30E%2FuO8c4AjMdgdeqnbblQ54b0%2Fimg.png) ![dongdongmei](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F6egfh%2FbtrnQ5qGhOw%2FeqkKDRRU1uDe1bXV2ES800%2Fimg.png)
 
@@ -37,6 +39,12 @@
 ![dongdongmei](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fu7bnL%2FbtrnOPPAPzz%2FzHH1OzjXlHCw69QBiw3tn0%2Fimg.png) 
 
 - **찾고자 하는 [교외 번호 카테고리](#-카테고리-종류)에 들어가서 번호를 찾아도 되고 필터링 기능을 이용한 검색을 통해서도 찾을 수 있도록 하였습니다** ❗
+
+## 😀 전화 걸기, 번호 복사
+![dongdongmei](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F5ZXB3%2FbtrnLIwLk9B%2F5bj6oThlR8dSfAKEGrXX9k%2Fimg.png)
+- **해당 부서를 누르면 전화걸기 버튼과 번호 복사하기 버튼이 나오게 됩니다** ❗
+- **번호 복사하기 버튼은 지인에게 부서 번호를 알려줄 경우 유용합니다** ❗
+
 
 ## ✔ 카테고리 종류
  - 모든 학과 사무실
