@@ -1,4 +1,4 @@
-[🛠Google Play🛠](https://play.google.com/store/apps/details?id=com.han.inhauniversityphonebook)
+[🛠Google Play 인하번호부 링크](https://play.google.com/store/apps/details?id=com.han.inhauniversityphonebook)
 # 🙌 안녕하세요. 인하번호부를 만든 동동메이 팀입니다.
 
 ## ❓ 인하번호부를 만들게 된 이유
