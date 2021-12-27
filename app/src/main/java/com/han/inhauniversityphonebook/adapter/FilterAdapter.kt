@@ -49,7 +49,8 @@ class FilterAdapter(myData: ArrayList<NumberModel>, val context: Context?, val o
         }else{
             for(data in arrayList){
                 val name = data.name.toString()
-                if(name.lowercase().contains(charText)){
+                val number = data.call.toString()
+                if(name.lowercase().contains(charText) || number.contains(charText)){
                     items?.add(data)
                 }
             }
