@@ -104,6 +104,9 @@ class Fragment0: Fragment(R.layout.fragment_number_list){
         departmentList.add(NumberModel("대학건강센터1","032-860-8311","0328608311","학생회관 2층 215호"))
         departmentList.add(NumberModel("대학건강센터2","032-860-8312","0328608312","학생회관 2층 215호"))
 
+        departmentList.add(NumberModel("인권센터1","032-860-8314","0328608314","정석학술정보관 519호"))
+        departmentList.add(NumberModel("인권센터2","032-860-9344","0328609344","정석학술정보관 519호"))
+
         departmentList.add(NumberModel("종합상황실","032-860-8597","0328608597","본관 1층 로비"))
 
         departmentList.add(NumberModel("학생지원팀1","032-860-7063","0328607063","7-343호"))
